@@ -1,0 +1,7 @@
+если локаль utf8bom
+не отображается текст str1012 в окне editormode- .isf generate code -info
+если utf8 кодировка в этом окне не верная.
+
+
+
+
