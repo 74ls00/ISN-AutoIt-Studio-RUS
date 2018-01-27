@@ -1,7 +1,7 @@
 ﻿[ISNAutoItSTUDIO]
 language=Russian
 version=1.06
-author= 74LS00 / Dimitry Masin (v0.88B)
+author= 74LS00 / Dimitry Masin (v0.88b)
 comment=Русский UTF8-BOM
 
 str1=ISN AutoIt Studio
@@ -1060,7 +1060,7 @@ str1053=Choose macro
 str1054=Choose the macro where you want to add the action.
 str1055=Used placeholders:
 str1056=Type of the plugin:
-str1057=Associated Filetypes:
+str1057=Связанные типы Файлов:
 str1058=Project settings
 str1059=Compile settings for the mainfile
 str1060=INFO: This settings can be overwritten by the AutoIt3Wrapper!
