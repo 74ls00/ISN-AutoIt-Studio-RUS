@@ -19,21 +19,58 @@ str218=Изменение размера:
 str240=Как переменные (например: $BS_DEFPUSHBUTTON)
 str245=Писать только элементы управления в .isf файл. (Позволяет комбинировать несколько .isf файлов)
 str250=При двойном клике на элементе:
+-----------------------------------------------------------------------
+BUG1
+german.lng , english.lng
+str61=Info
+str178=Info
 
-Не верный индекс.
-Строка 
-main
-str792=Процесс завершен! Теперь вы можете найти 'Testproject' списке проектов.
-использует заголовок
+My russian.lng
+str61=Информация
+      ^ (=Info) Window title
 str178=Информация о версии
-вместо
-str61=Инфо
+       ^ (=Version Information) Menu->Help (!)item $HelpMenu_item5
 
+FIX:
+Includes\Studio_Addons.au3 
 
-str606=Help
-нет отображения
+line 2616 written
+	$i = MsgBox(262144 + 48 + 4, _Get_langstr(178), _Get_langstr(227), 0, $Projekteinstellungen_GUI)
+required	
+	$i = MsgBox(262144 + 48 + 4, _Get_langstr(61), _Get_langstr(227), 0, $Projekteinstellungen_GUI)
 
+line 2647 written
+		MsgBox(262144 + 64, _Get_langstr(178), _Get_langstr(392), 0, $Studiofenster)
+required	
+		MsgBox(262144 + 64, _Get_langstr(61), _Get_langstr(392), 0, $Studiofenster)	
+	
+line 8412 written
+		MsgBox(262144 + 64, _Get_langstr(178), _Get_langstr(792), 0, $Config_GUI)
+required
+		MsgBox(262144 + 64, _Get_langstr(61), _Get_langstr(792), 0, $Config_GUI)
 
+line 8421 written
+	_Show_Warning("confirmdebugging", 308, _Get_langstr(178), _Get_langstr(803), _Get_langstr(7))
+required
+	_Show_Warning("confirmdebugging", 308, _Get_langstr(61), _Get_langstr(803), _Get_langstr(7))
+	
+Also: 178 > 61
+Line:    _Get_langstr:
+479     667
+2656    230
+2666    232
+2677    234
+8386    790
+
+-------------------------------------------------------------------------------
+BUG2
+Forms\ISN_Aenderungsprotokolle_Bericht.isf
+line 34 written
+GUICtrlSetTip(-1,"_Get_langstr(606)")
+must
+GUICtrlSetTip(-1,_Get_langstr(606))
+
+-------------------------------------------------------------------------------
 formstudio2
 str160=Font of the control
 отображает подсказку на индексе
