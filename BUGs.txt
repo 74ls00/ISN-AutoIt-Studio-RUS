@@ -83,3 +83,23 @@ str1318=Плагин|Версия|Тип файлов|Статус|Папка|П
 так их можно найти
 str1318=Плагин|Версия|Тип файлов|Статус
 
+----
+
+Data\Plugins\formstudio2\Forms\Formstudio_ControlEditor_Aussehen.isf
+
+line 36 written
+_Control_Add_ToolTip($MiniEditor_Icon_Index_Label,_ISNPlugin_Get_langstring(160))
+
+какое должно быть число ?
+
+str233=
+?
+пусть будет так
+str233=Номер иконки
+_Control_Add_ToolTip($MiniEditor_Icon_Index_Label,_ISNPlugin_Get_langstring(233))
+
+
+
+str180=Обновления: www.isnetwork.at[BREAK]Локализация: github.com/74ls00
+
+
